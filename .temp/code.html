@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Charan's Professional Works</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2559f4",
+                        "accent-teal": "#00f0ff",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101422",
+                        "surface-dark": "#161b2c",
+                        "surface-darker": "#0b0e17",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    boxShadow: {
+                        "neon": "0 0 5px theme('colors.primary'), 0 0 20px theme('colors.primary')",
+                        "neon-teal": "0 0 5px theme('colors.accent-teal'), 0 0 20px theme('colors.accent-teal')",
+                        "deep": "0 25px 50px -12px rgba(0, 0, 0, 0.7)",
+                    },
+                    backgroundImage: {
+                        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+                    }
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101422; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2559f4; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e4bd1; 
+        }
+        .card-glow-wrapper {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .card-glow-wrapper::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: -2px;
+            background: conic-gradient(from 0deg, transparent 0 340deg, #2559f4 360deg);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            animation: rotate 4s linear infinite;
+        }
+        .card-glow-wrapper:hover::before {
+            opacity: 1;
+        }
+        .card-glow-wrapper::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 1px;
+            background: #161b2c;border-radius: inherit;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .tech-reveal {
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .tech-reveal {
+            transform: translateY(0);
+        }
+        .timeline-line {
+            background: linear-gradient(180deg, rgba(37, 89, 244, 0) 0%, rgba(37, 89, 244, 0.5) 15%, rgba(37, 89, 244, 0.5) 85%, rgba(37, 89, 244, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display antialiased selection:bg-primary selection:text-white">
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80 border-b border-slate-200 dark:border-slate-800/60">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-lg">C</div>
+<span class="text-lg font-bold tracking-tight dark:text-white">CHARAN.DEV</span>
+</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+<a class="hover:text-primary transition-colors" href="#projects">SELECTED WORK</a>
+<a class="hover:text-primary transition-colors" href="#experience">EXPERIENCE</a>
+<a class="hover:text-primary transition-colors" href="#about">ABOUT</a>
+</div>
+<button class="px-5 py-2 rounded text-sm font-medium bg-primary hover:bg-blue-600 text-white transition-all shadow-[0_0_15px_-3px_rgba(37,89,244,0.5)]">
+                GET IN TOUCH
+            </button>
+</div>
+</nav>
+<header class="relative pt-40 pb-20 px-6 max-w-7xl mx-auto">
+<div class="relative z-10 max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold tracking-wider mb-6">
+<span class="w-2 h-2 rounded-full bg-accent-teal animate-pulse"></span>
+                OPEN TO NEW ROLES
+            </div>
+<h1 class="text-5xl md:text-7xl font-bold leading-tight text-slate-900 dark:text-white mb-6">
+                ARCHITECTING <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-teal">DIGITAL EXPERIENCES</span>
+</h1>
+<p class="text-xl text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed">
+                Software Engineer specialized in building high-performance, pixel-perfect web applications. Bridging the gap between engineering and sophisticated design.
+            </p>
+</div>
+<div class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+</header>
+<section class="py-24 px-6 relative" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-primary mb-2 uppercase">Selected Work</h2>
+<h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Engineering &amp; Interface Design</h3>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 flex-1 mx-8 hidden md:block self-center"></div>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs text-right hidden md:block">
+                    A collection of production-ready applications focusing on scalability and user experience.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<div class="group card-glow-wrapper rounded-xl bg-surface-dark shadow-deep overflow-hidden cursor-pointer h-[500px] flex flex-col relative">
+<div class="h-full w-full relative overflow-hidden">
+<img alt="E-commerce dashboard interface showing graphs and metrics" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-40" data-alt="E-commerce dashboard interface showing graphs and metrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEgUHvnPNxFu0L901QpPR1t-iaanCTHWRHwk3uWfe_qRBSaoL-qjoCrIAhydQ2IuPNq8iOKjAaEP6_yslPSq1KdGKZJ-GFeaeT9u0fJXcECrwp2NzioQYlh1KltS9o-VLsia_jKD4K9RvW4_iZf7dEwxu_nhe8T2ZkJziYAu8xjVscEtpir4F_hgMeJu98CmiClESsCF6A9U32HJAr8pFVTFeXmaaIswpTOFMvTSrp1HxkxHGxXz-mHPbi5YNlJZTNop76imik2ho"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-10 flex flex-col justify-end h-full pointer-events-none">
+<div class="transform group-hover:-translate-y-12 transition-transform duration-500 ease-out">
+<span class="text-accent-teal text-xs font-bold tracking-widest uppercase mb-2 block">E-Commerce • 2024</span>
+<h4 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">LazeyStore</h4>
+<p class="text-slate-400 text-sm max-w-md line-clamp-2 group-hover:text-slate-300 transition-colors">
+                                A comprehensive full-stack e-commerce solution featuring real-time inventory management, secure payments, and an optimized customer journey.
+                            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 tech-reveal bg-surface-dark/95 border-t border-slate-700/50 backdrop-blur-xl">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-primary/20 text-primary text-xs font-medium border border-primary/20">React</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Redux</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Node.js</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">MongoDB</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Express</span>
+</div>
+<div class="mt-4 flex items-center gap-4">
+<button class="text-white text-sm font-medium hover:text-primary flex items-center gap-1 pointer-events-auto">
+                                    View Live <span class="material-icons text-base">arrow_forward</span>
+</button>
+<button class="text-slate-400 text-sm font-medium hover:text-white flex items-center gap-1 pointer-events-auto">
+<span class="material-icons text-base">code</span> Source
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="group card-glow-wrapper rounded-xl bg-surface-dark shadow-deep overflow-hidden cursor-pointer h-[500px] flex flex-col relative md:mt-16">
+<div class="h-full w-full relative overflow-hidden">
+<img alt="Abstract 3D mesh network graphic in dark blue" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-40" data-alt="Abstract 3D mesh network graphic in dark blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAER4gFHRF6PeL7kFVvks5lxrDIBLyCI5ZDFhKBEZEAJCSLpWmSxOTUfcWGNClYHXBcasvSM-UEZEQi86f4Q2kpTW8B8fiiyiFpGGEFAT193ChaxTVKBZea1YOB-qCmaptoogDbpfVgPnrR2RgduvIFgW3YWg_gIyV5_lewm644VTdfKNm_jPdKFA8cioamM6JunVkPw6lfRp0qSBW6PrhFnjY_CjeR5jOIwaga4turYR_g3iyz_7FNORkG_SEm5Qtmucwhe9uT9DI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-10 flex flex-col justify-end h-full pointer-events-none">
+<div class="transform group-hover:-translate-y-12 transition-transform duration-500 ease-out">
+<span class="text-accent-teal text-xs font-bold tracking-widest uppercase mb-2 block">Tooling • 2023</span>
+<h4 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">LazeyMarkdown</h4>
+<p class="text-slate-400 text-sm max-w-md line-clamp-2 group-hover:text-slate-300 transition-colors">
+                                An advanced browser-based Markdown editor with live preview, syntax highlighting, and local persistence for distraction-free writing.
+                            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 tech-reveal bg-surface-dark/95 border-t border-slate-700/50 backdrop-blur-xl">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-primary/20 text-primary text-xs font-medium border border-primary/20">React</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Dexie.js</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">TypeScript</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">CodeMirror</span>
+</div>
+<div class="mt-4 flex items-center gap-4">
+<button class="text-white text-sm font-medium hover:text-primary flex items-center gap-1 pointer-events-auto">
+                                    Launch App <span class="material-icons text-base">arrow_forward</span>
+</button>
+<button class="text-slate-400 text-sm font-medium hover:text-white flex items-center gap-1 pointer-events-auto">
+<span class="material-icons text-base">code</span> Source
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="group card-glow-wrapper rounded-xl bg-surface-dark shadow-deep overflow-hidden cursor-pointer h-[500px] flex flex-col relative">
+<div class="h-full w-full relative overflow-hidden">
+<img alt="Abstract liquid oil dark background with blue light" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-40" data-alt="Abstract liquid oil dark background with blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdpfKdIw1xLIgRp9hHAZ5PKfv_h1hDLGIxo0q1DWoYIZY5Ti3l9ecERwjLhjNOb2EsYZaJVObvvYL83Z80-mlS-vom2yZXqUIjIENLrrZyP9MWbqBbYbtUbKCFrIp5WzTI8Yr3kG276guHzXt6D-TaIh76sHWx-8R--kGwip6pAiWVEM1VB3j8ZjPdShafY6wlOQyEe5L2dyuhmmi7pTPjCXv63Fj3ktKKgfacjtAM4_w_4igd_xKmtJzyGXgB230eX4-sulX_BZw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-10 flex flex-col justify-end h-full pointer-events-none">
+<div class="transform group-hover:-translate-y-12 transition-transform duration-500 ease-out">
+<span class="text-accent-teal text-xs font-bold tracking-widest uppercase mb-2 block">AI Integration • 2024</span>
+<h4 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">LazeyMovies</h4>
+<p class="text-slate-400 text-sm max-w-md line-clamp-2 group-hover:text-slate-300 transition-colors">
+                                Intelligent movie recommendation engine powered by Google's Gemini API. Features natural language search and personalized watchlists.
+                            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 tech-reveal bg-surface-dark/95 border-t border-slate-700/50 backdrop-blur-xl">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-primary/20 text-primary text-xs font-medium border border-primary/20">Gemini API</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">React</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Tailwind CSS</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">TMDB API</span>
+</div>
+<div class="mt-4 flex items-center gap-4">
+<button class="text-white text-sm font-medium hover:text-primary flex items-center gap-1 pointer-events-auto">
+                                    Visit Site <span class="material-icons text-base">arrow_forward</span>
+</button>
+<button class="text-slate-400 text-sm font-medium hover:text-white flex items-center gap-1 pointer-events-auto">
+<span class="material-icons text-base">code</span> Source
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="group card-glow-wrapper rounded-xl bg-surface-dark shadow-deep overflow-hidden cursor-pointer h-[500px] flex flex-col relative md:mt-16">
+<div class="h-full w-full relative overflow-hidden">
+<img alt="Server room with blue neon lights representing backend infrastructure" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-40" data-alt="Server room with blue neon lights representing backend infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjWbtDyI4MgoODsSGWycIBx5Q91CyLk6qDUP9e0D-yKErH2fqyeqqKLsF-vNbO5m1-D7Vhcw8-8L1b1G2Tl9AgU53JTFrqtMV1g6nx-oha7SGGOQPvWvw-nMxtMBtO2EGAaqrl4sHXQbuCcUlxmfEhqeu20pjzE9BT60Bbcwz_4kmpLPhgQ5FmLedbjB99p-8Ka4CXoUde4ulw1c-CYEuSABF6VtnUvGE9GHidRWQEOOHIQUbaaBSohLhO46JToCDysTQ5-94cGRk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-10 flex flex-col justify-end h-full pointer-events-none">
+<div class="transform group-hover:-translate-y-12 transition-transform duration-500 ease-out">
+<span class="text-accent-teal text-xs font-bold tracking-widest uppercase mb-2 block">Infrastructure • 2022</span>
+<h4 class="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Cloud Monitor CLI</h4>
+<p class="text-slate-400 text-sm max-w-md line-clamp-2 group-hover:text-slate-300 transition-colors">
+                                A robust command-line interface for managing AWS resources efficiently. Built with Ink (React for CLI).
+                            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 tech-reveal bg-surface-dark/95 border-t border-slate-700/50 backdrop-blur-xl">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-primary/20 text-primary text-xs font-medium border border-primary/20">Node.js</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Ink</span>
+<span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">AWS SDK</span>
+</div>
+<div class="mt-4 flex items-center gap-4">
+<button class="text-white text-sm font-medium hover:text-primary flex items-center gap-1 pointer-events-auto">
+                                    View on GitHub <span class="material-icons text-base">arrow_forward</span>
+</button>
+<button class="text-slate-400 text-sm font-medium hover:text-white flex items-center gap-1 pointer-events-auto">
+<span class="material-icons text-base">code</span> Source
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-surface-darker relative overflow-hidden" id="experience">
+<div class="absolute top-1/2 left-0 w-64 h-64 bg-accent-teal/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-4xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-sm font-bold tracking-[0.2em] text-accent-teal mb-2 uppercase">Professional Journey</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white">Career Timeline</h3>
+</div>
+<div class="relative">
+<div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line transform md:-translate-x-1/2"></div>
+<div class="relative z-10 mb-16 md:mb-24 group">
+<div class="flex flex-col md:flex-row items-start md:items-center w-full">
+<div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 mb-2 md:mb-0">
+<span class="inline-block px-3 py-1 rounded border border-primary/30 text-primary text-xs font-mono bg-surface-dark">2022 — Present</span>
+</div>
+<div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-surface-dark border-2 border-primary group-hover:bg-primary group-hover:shadow-neon transition-all duration-300"></div>
+</div>
+<div class="md:w-1/2 md:pl-12 pl-20 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Software Engineer</h4>
+<div class="text-slate-400 text-sm font-medium mb-3">Jalan Technology Consulting • Remote</div>
+<ul class="space-y-2 text-slate-400 text-sm leading-relaxed list-disc list-outside ml-4 marker:text-primary">
+<li>Engineered high-performance user interfaces using React.js and TypeScript, significantly enhancing user engagement.</li>
+<li>Architected modular and reusable component libraries to streamline development across multiple projects.</li>
+<li>Collaborated with cross-functional teams to integrate complex backend APIs with seamless frontend experiences.</li>
+</ul>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">React.js</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">TypeScript</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">Redux</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">Material UI</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 mb-16 md:mb-24 group">
+<div class="flex flex-col md:flex-row-reverse items-start md:items-center w-full">
+<div class="md:w-1/2 md:pl-12 pl-20 md:pl-12 mb-2 md:mb-0">
+<span class="inline-block px-3 py-1 rounded border border-accent-teal/30 text-accent-teal text-xs font-mono bg-surface-dark">2020 — 2022</span>
+</div>
+<div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-surface-dark border-2 border-accent-teal group-hover:bg-accent-teal group-hover:shadow-neon-teal transition-all duration-300"></div>
+</div>
+<div class="md:w-1/2 md:pr-12 md:text-right pl-20 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-accent-teal transition-colors">Frontend Developer</h4>
+<div class="text-slate-400 text-sm font-medium mb-3">StartupX • Remote</div>
+<ul class="space-y-2 text-slate-400 text-sm leading-relaxed list-disc list-outside ml-4 md:ml-0 md:mr-4 md:list-none marker:text-accent-teal">
+<li class="relative md:pr-4 md:after:content-['•'] md:after:absolute md:after:-right-6 md:after:top-0 md:after:text-accent-teal">Developed key features for the flagship SaaS product, resulting in a 25% increase in user retention.</li>
+<li class="relative md:pr-4 md:after:content-['•'] md:after:absolute md:after:-right-6 md:after:top-0 md:after:text-accent-teal">Implemented comprehensive end-to-end testing using Cypress.</li>
+</ul>
+<div class="mt-4 flex flex-wrap gap-2 md:justify-end">
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">Vue.js</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">Firebase</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">Cypress</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 mb-16 md:mb-24 group">
+<div class="flex flex-col md:flex-row items-start md:items-center w-full">
+<div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 mb-2 md:mb-0">
+<span class="inline-block px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs font-mono bg-surface-dark">2018 — 2020</span>
+</div>
+<div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-surface-dark border-2 border-slate-600 group-hover:border-white group-hover:bg-white transition-all duration-300"></div>
+</div>
+<div class="md:w-1/2 md:pl-12 pl-20 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-slate-200 transition-colors">Junior Web Developer</h4>
+<div class="text-slate-400 text-sm font-medium mb-3">Creative Agency • New York</div>
+<ul class="space-y-2 text-slate-400 text-sm leading-relaxed list-disc list-outside ml-4 marker:text-slate-500">
+<li>Collaborated with designers to translate Figma mockups into pixel-perfect HTML/CSS.</li>
+<li>Maintained and updated over 20 client WordPress websites.</li>
+</ul>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">HTML/CSS</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">JavaScript</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold bg-white/5 px-2 py-1 rounded">PHP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<a class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors border-b border-primary hover:border-white pb-0.5" href="#">
+                    Download Full Resume <span class="material-icons text-sm">download</span>
+</a>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-slate-800 bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-slate-500 text-sm">
+                © 2024 SREERAMA SUBRAMANYA CHARAN K. All rights reserved.
+            </div>
+<div class="flex items-center gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">GitHub</span>
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

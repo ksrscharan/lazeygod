@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Charan's Identity &amp; Hero View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2559f4",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101422",
+              "glass-border": "rgba(255, 255, 255, 0.08)",
+              "glass-bg": "rgba(16, 20, 34, 0.6)",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            backgroundImage: {
+                'mesh-gradient': 'radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%)',
+                'glow-conic': 'conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #e92a67 360deg)',
+            }
+          },
+        },
+      }
+    </script>
+<style>.glass-panel {
+            background: rgba(16, 20, 34, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .glass-nav {
+            background: rgba(16, 20, 34, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-glow {
+            text-shadow: 0 0 40px rgba(37, 89, 244, 0.3);
+        }.mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-color: #101422;
+            overflow: hidden;
+        }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+        }.grid-overlay {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+        }.honeycomb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+        .tech-card:hover {
+            border-color: #2559f4;
+            box-shadow: 0 0 20px rgba(37, 89, 244, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen selection:bg-primary selection:text-white antialiased">
+<div class="mesh-bg">
+<div class="orb w-[500px] h-[500px] bg-primary/20 top-[-10%] left-[-10%]"></div>
+<div class="orb w-[600px] h-[600px] bg-violet-900/30 bottom-[-10%] right-[-10%]"></div>
+<div class="orb w-[300px] h-[300px] bg-indigo-500/20 top-[40%] left-[60%]"></div>
+<div class="absolute inset-0 grid-overlay"></div>
+</div>
+<nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="glass-nav rounded-full px-6 py-3 flex items-center space-x-8 shadow-2xl shadow-primary/5">
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300" href="#">About</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300" href="#">Work</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/40">
+<span class="material-icons text-white text-sm">code</span>
+</div>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300" href="#">Skills</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-300" href="#">Contact</a>
+</div>
+</nav>
+<main class="relative z-10 pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex flex-col gap-24 md:gap-32">
+<section class="relative min-h-[70vh] flex items-center justify-center">
+<div class="glass-panel rounded-2xl p-8 md:p-16 w-full max-w-5xl relative overflow-hidden group">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/30 transition-all duration-700"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-end md:items-start justify-between gap-12">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold tracking-widest uppercase text-primary">Open to work</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] text-glow uppercase">
+                                SREERAMA<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">SUBRAMANYA CHARAN K</span>
+</h1>
+<p class="text-xl md:text-2xl font-light tracking-wide text-primary">
+                                Frontend Developer <span class="text-slate-500 mx-2">·</span> React <span class="text-slate-500 mx-2">·</span> UI Systems
+                            </p>
+<p class="text-base md:text-lg text-slate-400 max-w-xl font-light leading-relaxed">
+                                Expert in crafting scalable, high-performance web applications with clean UI/UX architecture.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-primary text-white rounded-lg font-bold tracking-wide hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25 flex items-center group">
+                                View Projects
+                                <span class="material-icons ml-2 group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
+</button>
+<button class="px-8 py-4 border border-slate-700 hover:border-white text-slate-300 hover:text-white rounded-lg font-medium transition-colors backdrop-blur-sm">
+                                Download CV
+                            </button>
+</div>
+</div>
+<div class="hidden md:block w-64 h-64 relative">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-purple-600 rounded-full opacity-20 blur-xl animate-pulse"></div>
+<div class="absolute inset-4 glass-panel rounded-xl border-slate-700/50 flex items-center justify-center overflow-hidden">
+<img alt="Abstract Code" class="opacity-60 mix-blend-overlay w-full h-full object-cover" data-alt="Abstract geometric dark liquid texture representing code complexity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATawwKKf_KK-UmRQbseyq5z63Gj7kCnNKUNAHcpbLWt2PIYpYQ2Q79a1eeaomeWy9xITXMf6FNOl9Xl-LgWD7IS88HN1OdWmAzBJtTcNkO9ZVkxXGJIKq2RzfANtoyxprDO1wmoybsSeXVm_BFgdFdpEFOfs5EDE5EKygV2USIsevuPeYmw5Mrj3kZWo0PqS46kd5SX_l-wjJPvczUKPteNM5Yc3CnkhIjVJexJAps_3Fm8yd-IUYJ79ECKqL6S-7zX7pfSF_f63A"/>
+<div class="absolute bottom-4 left-4">
+<span class="text-xs font-mono text-primary block">v2.4.0</span>
+<span class="text-[10px] text-slate-400 uppercase tracking-wider">System Active</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent opacity-50"></div>
+<div class="absolute top-0 right-16 w-[1px] h-32 bg-gradient-to-b from-slate-700 to-transparent opacity-50"></div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-4 block">About Me</span>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Bridging the gap between<br/> <span class="text-slate-500">design &amp; code.</span></h2>
+</div>
+<div class="lg:col-span-8 space-y-8">
+<p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light">
+                    I am a senior UI engineer obsessed with component architecture and pixel perfection. With a background in traditional graphic design, I approach frontend development with an eye for typography, spacing, and rhythm.
+                </p>
+<p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light">
+                    Currently focusing on building scalable <span class="text-white font-normal border-b border-primary/50">Design Systems</span> and high-performance React applications that feel fluid and natural.
+                </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-slate-800">
+<div>
+<span class="block text-4xl font-bold text-white mb-1">08+</span>
+<span class="text-xs uppercase tracking-wider text-slate-500">Years Exp.</span>
+</div>
+<div>
+<span class="block text-4xl font-bold text-white mb-1">24</span>
+<span class="text-xs uppercase tracking-wider text-slate-500">Systems Built</span>
+</div>
+<div>
+<span class="block text-4xl font-bold text-white mb-1">100%</span>
+<span class="text-xs uppercase tracking-wider text-slate-500">Commitment</span>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-2 block">Technical Stack</span>
+<h2 class="text-3xl md:text-4xl font-bold text-white">Core Technologies</h2>
+</div>
+<div class="hidden md:block h-[1px] flex-1 mx-8 bg-slate-800 self-center"></div>
+<p class="text-slate-400 text-sm max-w-xs text-right mt-4 md:mt-0">
+                    A curated selection of tools used to build robust applications.
+                </p>
+</div>
+<div class="honeycomb-grid">
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-[#61DAFB]/10 flex items-center justify-center mb-4 group-hover:bg-[#61DAFB]/20 transition-colors">
+<span class="material-icons text-[#61DAFB]">code</span> 
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">React</h3>
+<p class="text-xs text-slate-400">Advanced Patterns &amp; Hooks</p>
+</div>
+</div>
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-[#3178C6]/10 flex items-center justify-center mb-4 group-hover:bg-[#3178C6]/20 transition-colors">
+<span class="material-icons text-[#3178C6]">data_object</span> 
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">TypeScript</h3>
+<p class="text-xs text-slate-400">Strict Typing &amp; Generics</p>
+</div>
+</div>
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-[#38B2AC]/10 flex items-center justify-center mb-4 group-hover:bg-[#38B2AC]/20 transition-colors">
+<span class="material-icons text-[#38B2AC]">style</span> 
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Tailwind</h3>
+<p class="text-xs text-slate-400">Custom Configs &amp; Plugins</p>
+</div>
+</div>
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+<span class="material-icons text-white">layers</span> 
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Next.js</h3>
+<p class="text-xs text-slate-400">SSR &amp; App Router</p>
+</div>
+</div>
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 transition-colors">
+<span class="material-icons text-orange-500">animation</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Framer</h3>
+<p class="text-xs text-slate-400">Motion &amp; Interactions</p>
+</div>
+</div>
+<div class="tech-card glass-panel rounded-xl p-6 flex flex-col items-start justify-between min-h-[160px] cursor-pointer transition-all duration-300 group">
+<div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center mb-4 group-hover:bg-pink-500/20 transition-colors">
+<span class="material-icons text-pink-500">api</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-1">GraphQL</h3>
+<p class="text-xs text-slate-400">Apollo &amp; Schemas</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-8 block">Selected Work</span>
+<div class="space-y-4">
+<div class="group relative block">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+<div class="relative flex items-center justify-between p-6 border-b border-slate-800 group-hover:border-primary/50 transition-colors">
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">Fintech Dashboard v2</h3>
+<p class="text-slate-500 mt-1">Design System • React • Recharts</p>
+</div>
+<span class="material-icons text-slate-600 group-hover:text-primary transform group-hover:-rotate-45 transition-all duration-300">arrow_forward</span>
+</div>
+</div>
+<div class="group relative block">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+<div class="relative flex items-center justify-between p-6 border-b border-slate-800 group-hover:border-primary/50 transition-colors">
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">E-Commerce Monorepo</h3>
+<p class="text-slate-500 mt-1">Turborepo • Next.js • Stripe</p>
+</div>
+<span class="material-icons text-slate-600 group-hover:text-primary transform group-hover:-rotate-45 transition-all duration-300">arrow_forward</span>
+</div>
+</div>
+<div class="group relative block">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+<div class="relative flex items-center justify-between p-6 border-b border-slate-800 group-hover:border-primary/50 transition-colors">
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">HealthTech App</h3>
+<p class="text-slate-500 mt-1">React Native • Accessibility • Offline First</p>
+</div>
+<span class="material-icons text-slate-600 group-hover:text-primary transform group-hover:-rotate-45 transition-all duration-300">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<footer class="pt-20 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-slate-500 text-sm">
+                © 2023. Crafted by hand.
+            </div>
+<div class="flex space-x-8">
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">GitHub</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Twitter</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Email</a>
+</div>
+</footer>
+</main>
+</body></html>
