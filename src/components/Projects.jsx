@@ -44,9 +44,9 @@ function Projects() {
                 <div className="headerAbout text-blue-600 my-2 space400 tracking-widest">
                     PROJECTS
                 </div>
-                <div className="aboutText1 text-white text-4xl lg:text-5xl space900">
-                    Selected Works
-                </div>
+                <div className="aboutText1 text-white text-3xl space900 ">
+                        Selected Works
+                    </div>
                 <div className="aboutText2 text-white/40 space400 mt-2">
                     A showcase of my recent applications and creative experiments.
                 </div>
